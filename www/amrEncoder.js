@@ -1,18 +1,34 @@
 
-importScripts('workerUtil.js');
 
-/**
- * AMR encoder by cabbage <251949141@qq.com>, MIT license
- * @see https://github.com/twocabbages/amr.js
- */
-importScripts('amrnb.min.js');
+if(typeof WEBPACK_BUILD !== 'undefined' && WEBPACK_BUILD){
 
-importScripts('silenceDetector.js');
-importScripts('encoder.js');
+	require('mmir/worker/workerUtil.js');
+
+	/**
+	 * AMR encoder by cabbage <251949141@qq.com>, MIT license
+	 * @see https://github.com/twocabbages/amr.js
+	 */
+	require('./amrnb.min.js');
+
+	require('mmir-plugin-encoder-amr/www/silenceDetector.js');
+	require('mmir-plugin-encoder-amr/www/encoder.js');
+
+} else {
+	importScripts('workerUtil.js');
+
+	/**
+	 * AMR encoder by cabbage <251949141@qq.com>, MIT license
+	 * @see https://github.com/twocabbages/amr.js
+	 */
+	importScripts('amrnb.min.js');
+
+	importScripts('silenceDetector.js');
+	importScripts('encoder.js');
+}
 
 
 function AmrEncoder(){
-	
+
 	 /**
 	  * Different modes / bit rates:
 	  * <pre>
@@ -30,24 +46,24 @@ function AmrEncoder(){
 	 this.encoderFinish = function(){
 		 return;
 	 };
-	 
+
 	 this.encoderCleanUp = function(){
 		 return;
 	 };
-	 
-	 this.encodeBuffer = function(buff){		    
+
+	 this.encodeBuffer = function(buff){
 		    var buf_length = buff.length;
-			    
+
 		    var minibuffer = Math.floor(2*buf_length/11)+1;
 		    var buffer_i16 = new Int16Array(minibuffer);
 		    var view = new DataView(buffer_i16.buffer);
 		    var volume = 1;
 		    var index = 0;
 		    var flip = 0;
-		    
+
 //		    console.log("Buffer Size: "+buf_length);
 //		    console.log("new Buffer Size: "+minibuffer);
-		    
+
 		    var counterTest = 0;
 		    //for (var i = 0; ; i=i+5+flip){
 		    while(counterTest < buf_length){
@@ -56,9 +72,9 @@ function AmrEncoder(){
 		        flip = (flip+1)%2;
 		        counterTest=counterTest+5+flip;
 		    }
-		    
+
 		    this.encoded = this.codec.encode(buffer_i16,true);
-    
+
 	    };
 }
 
