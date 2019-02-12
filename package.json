@@ -21,7 +21,7 @@
   "author": "russa",
   "license": "MIT",
   "dependencies": {
-    "mmir-plugin-encoder-core": "https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-core.git"
+    "mmir-plugin-encoder-core": "file:../mmir-plugin-encoder-core"
   },
   "peerDependencies": {
     "mmir": "https://gitlab-cos.b.dfki.de/mmir/dev_mmir-lib.git#develop/webpack"
