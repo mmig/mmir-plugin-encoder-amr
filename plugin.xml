@@ -23,11 +23,11 @@
 
     <!-- module implementation for integration into MMIR framework  -->
     <asset
-        src="www/amrEncoder.js"
+        src="www/workers/amrEncoder.js"
         target="mmirf/workers/amrEncoder.js" />
 
     <asset
-        src="www/amrnb.min.js"
+        src="www/workers/amrnb.min.js"
         target="mmirf/workers/amrnb.min.js" />
 
     <!--
@@ -37,7 +37,7 @@
               in order to use this!
      -->
     <!--asset
-        src="www/amrnb.js"
+        src="www/workers/amrnb.js"
         target="mmirf/workers/amrnb.js" /-->
 
 </plugin>
