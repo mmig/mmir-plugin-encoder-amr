@@ -2,10 +2,10 @@
   "name": "mmir-plugin-encoder-amr",
   "version": "1.0.0",
   "description": "Cordova plugin for the MMIR framework that adds a JavaScript based AMR encoder: uses AMR.js (MIT license), see https://github.com/jpemartins/amr.js",
-  "main": "./www/workers/amrEncoder.js",
+  "main": "./www/webworker/amrEncoder.js",
   "directories": {
     "lib": "./www",
-    "workers": "./www/workers"
+    "webworker": "./www/webworker"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
