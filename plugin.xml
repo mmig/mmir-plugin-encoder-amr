@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin 
+<plugin
     xmlns="http://cordova.apache.org/ns/plugins/1.0"
     id="mmir-plugin-encoder-amr"
-    version="0.1.0">
+    version="1.0.0">
 
     <name>MMIR framwork AMR encoder</name>
-    
+
     <keywords>cordova,audio,codec,amr</keywords>
-    
+
     <description>
-      Cordova plugin for the MMIR framework that adds a JavaScript based AMR encoder; 
+      Cordova plugin for the MMIR framework that adds a JavaScript based AMR encoder;
       uses AMR.js (MIT license), see https://github.com/jpemartins/amr.js
     </description>
 
@@ -19,25 +19,25 @@
         <engine name="cordova" version=">=5.0" />
     </engines>
 
-	<dependency id="mmir-plugin-encoder-core" url="." subdir="mmir-plugin-encoder-core" />
-  
+	<dependency id="mmir-plugin-encoder-core" url="https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-core.git" commit="master" />
+
     <!-- module implementation for integration into MMIR framework  -->
     <asset
         src="www/amrEncoder.js"
         target="mmirf/workers/amrEncoder.js" />
-        
+
     <asset
         src="www/amrnb.min.js"
         target="mmirf/workers/amrnb.min.js" />
-    
-    <!-- 
+
+    <!--
          DEV version (i.e. not minified) of AMR encoder
-         
+
          NOTE need to change importScripts() statement in amrEncoder.js
               in order to use this!
      -->
     <!--asset
         src="www/amrnb.js"
         target="mmirf/workers/amrnb.js" /-->
-    
+
 </plugin>
