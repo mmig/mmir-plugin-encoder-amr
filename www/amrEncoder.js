@@ -10,8 +10,8 @@ if(typeof WEBPACK_BUILD !== 'undefined' && WEBPACK_BUILD){
 	 */
 	require('./amrnb.min.js');
 
-	require('mmir-plugin-encoder-amr/www/silenceDetector.js');
-	require('mmir-plugin-encoder-amr/www/encoder.js');
+	require('mmir-plugin-encoder-core/www/silenceDetector.js');
+	require('mmir-plugin-encoder-core/www/encoder.js');
 
 } else {
 	importScripts('workerUtil.js');
