@@ -17,12 +17,10 @@
     "amr",
     "ecosystem:cordova"
   ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=5.0"
-    }
-  ],
+  "engines": {
+    "cordova": ">=5.0",
+    "npm": ">=2.0"
+  },
   "dependencies": {
 	  "mmir-plugin-encoder-core": "https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-core.git"
   },
