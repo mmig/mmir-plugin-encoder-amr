@@ -2,16 +2,16 @@
 
 if(typeof WEBPACK_BUILD !== 'undefined' && WEBPACK_BUILD){
 
-	require('mmir-lib/workers/workerUtil.js');
+	require('mmir-lib/workers/workerUtil');
 
 	/**
 	 * AMR encoder by cabbage <251949141@qq.com>, MIT license
 	 * @see https://github.com/twocabbages/amr.js
 	 */
-	require('../amrnb.min.js');
+	require('mmir-plugin-encoder-amr/amrnb');
 
-	require('mmir-plugin-encoder-core/silenceDetector.js');
-	require('mmir-plugin-encoder-core/encoder.js');
+	require('mmir-plugin-encoder-core/silenceDetector');
+	require('mmir-plugin-encoder-core/encoder');
 
 } else {
 	importScripts('workerUtil.js');
