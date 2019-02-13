@@ -6,7 +6,7 @@ var _paths = {
   "mmir-plugin-encoder-amr": "www/webworker/amrEncoder.js"
 };
 var _workers = [
-  "mmir-plugin-encoder-amr/amrEncoder"
+  "mmir-plugin-encoder-amr/workers/amrEncoder"
 ];
 var _exportedModules = [
   "mmir-plugin-encoder-amr"
