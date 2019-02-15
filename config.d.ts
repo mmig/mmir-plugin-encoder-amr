@@ -6,5 +6,5 @@
  * NOTE would need to be implemented via mmir-plugin-encoder-core(?)
  */
 export interface AMREncoderConfigEntry {
-  audioEncoder?: any;
+  amrEncoder?: any;
 }
