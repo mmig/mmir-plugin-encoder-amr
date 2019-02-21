@@ -5,6 +5,6 @@
  *
  * NOTE would need to be implemented via mmir-plugin-encoder-core(?)
  */
-export interface AMREncoderConfigEntry {
+export interface PluginConfig {
   amrEncoder?: any;
 }
