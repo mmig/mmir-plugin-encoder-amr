@@ -35,7 +35,12 @@
   "mmir": {
     "workers": [
       "./www/webworker"
-    ]
+    ],
+    "modes": {
+      "min": {
+        "./www/amrnb.js": "./www/amrnb.min.js"
+      }
+    }
   },
   "dependencies": {
     "mmir-plugin-encoder-core": "git+https://gitlab-cos.b.dfki.de/mmir/mmir-plugin-encoder-core.git"
