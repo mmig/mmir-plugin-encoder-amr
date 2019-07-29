@@ -2,7 +2,7 @@
 
 if(typeof WEBPACK_BUILD !== 'undefined' && WEBPACK_BUILD){
 
-	require('mmir-lib/workers/workerUtil');
+	require('mmir-lib/lib/workers/workerUtil');
 
 	/**
 	 * AMR encoder by cabbage <251949141@qq.com>, MIT license
